@@ -1,0 +1,52 @@
+ <div class="container">	
+	<div class="row" >
+		<header class="col-sm-12 clearfix-header visible-lg">
+		    <h1>{{mytitle}}</h1>
+		    <span ng-if="method!='' && method!=null " class="tip-important">{{method}}</span>
+		    
+		    
+	 
+		</header>
+
+		<header class="col-sm-12 clearfix-header visible-xs" style="padding: 110px;margin-top:7px;">
+		    <h1 class="tiltleapi">{{mytitle}}</h1> 
+		    <span ng-if="method!='' && method!=null " class="tip-important small">{{method}}</span>
+
+		</header>
+		<div class="card-header-blue col-sm-12 col-md-12">
+			<div class="col-md-6 text-center"><h5>Form Submission</h5></div>
+			<span class="v-line visible-lg"></span>
+    		<div class="col-md-6 text-center visible-lg" style="margin-left: -118px"><h5>Model Schema</h5></div>
+		</div>
+	</div>
+	
+	<div class="container-fluid col-sm-5">
+		<div class="row">
+		   	<div class="content-wrapper" >
+
+			    <p><div class="container-header"></div></p>
+			
+				<div id="result" style="text-transform: lowercase;" align="right"  ></div>		 <!--the id=result is calleed here from BaseProductController.js -->
+
+				<p><div class="container-footer"></div> </p>
+
+				<token></token>
+			</div>
+		</div>
+	</div>
+				<div class="card-header-blue visible-xs">
+            		<h5 class="card-heading">Model Schema</h5>
+        		</div>
+
+	<div class="container-fluid col-sm-7" id="modelId" style="margin-top: 56px">
+					<!-- {{value}} -->
+		<div ng-bind-html = "getTemplate()"></div></div>
+		
+	<div class="container-fluid col-sm-12" id="valueId">
+					<!-- {{value}} -->
+		<div ng-bind-html = "getTemplate()"></div></div>
+		
+</div>
+
+
+

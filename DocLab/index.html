@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  	<title>Document Lab | API- Documents</title>
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet"  href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> 
+      <link rel="stylesheet"  href="css/style.css">
+      <link rel="icon" href="img/favicon.ico"> 
+  	
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
+    
+      <script>var App = angular.module('DocumentLabApp', ['ngRoute']); 
+        App.filter('unsafe', function($sce) {
+        return $sce.trustAsHtml;
+        });
+
+        App.filter('trust',function($sce){
+        return function(html){
+        return $sce.trustAsHtml(html)
+         }
+        });
+
+ 
+        App.service('actionService',function() { 
+
+            return { 
+
+              'title' : 'API documentation',
+              'apipath' :'',
+              'jsonPath':''
+             
+
+            }
+
+        });  
+
+
+        window.onbeforeunload=function(){
+          return 'Are you sure you want to exit?';
+        }
+        
+      </script>
+
+  </head>
+  <body ng-app="DocumentLabApp">
+
+
+
+     
+    <div id="throbber" style="display:none; min-height:120px;"></div>
+    <div id="noty-holder"></div>
+    <div id="wrapper">
+      <topbar></topbar>  
+      <sidenav></sidenav>
+      <token></token>
+      <div ng-view></div>
+      <footerbar></footerbar>
+  
+    </div>
+
+    
+  </body>
+<script src="app.js"></script> 
+    <script src="controller/mainController.js"></script>
+    <script src="controller/FeatureController.js"></script>
+    <script src="controller/docController.js"></script>
+    <script src="controller/eventsController.js"></script>
+    <script src="controller/KeyController.js"></script>
+    <script src="controller/BaseProductController.js"></script>
+
+
+    <script src="directives/Topbar/topbarController.js"></script>
+    <script src="directives/Sidenav/sidenavController.js"></script>
+    <script src="directives/footer/footerController.js"></script>
+
+
+    <script src="directives/Topbar/topbar.directive.js"></script>
+    <script src="directives/Sidenav/sidenav.directive.js"></script>
+    <script src="directives/footer/footer.directive.js"></script>
+    <script src="directives/auth_token.directive.js"></script>
+
+
+    <script src="js/fetch_record.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

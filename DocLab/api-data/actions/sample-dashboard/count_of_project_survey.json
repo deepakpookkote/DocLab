@@ -1,0 +1,33 @@
+  {
+
+  	"key": "{'name':'key','id':'input_token','placeholder':'API token','description':'Enter the api_token','value':'','type':'text','required':'required'}",
+
+  	"object": {
+
+  		"projects": {
+
+  			"data": {
+
+  				"projectId": "{'name':'projectId','id':'projectId','placeholder':'ProjectID','description':'true or false','value':'','type':'text','required':'required'}"
+
+  			}
+  		},
+  		"inprogress": {
+  			"data": {
+  				"surveyStatus": "{'name':'surveyStatus','id':'surveyStatus','placeholder':'Survey Status','description':'In progress','value':'','type':'text','required':'required'}"
+  			}
+  		},
+  		"projectSurvey": {
+  			"data": {
+
+  				"projectId": "{'name':'projectId','id':'projectSurveyId','placeholder':'projectSurveyId','description':'true or false','value':'','type':'text','required':'required'}"
+
+  			}
+  		},
+  		"independentSurvey": {
+  			"data": {
+  				"projectId": "{'name':'independentSurvey','id':'independentSurveyId','placeholder':'independentSurveyId','description':'<<null>>','value':'null','type':'text','required':'required'}"
+  			}
+  		}
+  	}
+  }

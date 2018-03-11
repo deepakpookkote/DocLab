@@ -1,0 +1,9 @@
+{ 
+
+            "name":"{'name':'name','id':'userid','placeholder':'UserID','description':'Enter Username','value':'','type':'text','required':'required'}",
+
+
+            "password":"{'name':'password','placeholder':'password','description':'Enter Password','value':'','type':'password','required':'required'}"
+
+
+}	

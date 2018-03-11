@@ -1,0 +1,43 @@
+
+<div class="collapse navbar-collapse side-nav-ex2-collapse">
+            <ul class="nav navbar-nav side-nav" style="background: rgba(236, 239, 241, 0.9);  ">
+                <li id="Search">
+                    <form class="navbar-form navbar-left visible-lg" id="Search_box">
+                      <div class="form-group">
+                        <input type="text" class="form-control" ng-model="getlist" placeholder="Search Docs..">
+                      </div>
+
+
+                    </form>
+                    <form class="navbar-form navbar-left visible-xs" id="Search_box">
+                      <div class="form-group mob_search">
+                        <input type="text" class="form-control mob_search" ng-model="getlist" placeholder="Search Docs..">
+                      </div>
+
+
+                    </form>
+                </li>
+             
+  
+                <li id="core">
+                    <a href="#">Core Documentation</a>
+                </li>
+                <li ng-show="result.length > 0" style="cursor: pointer;" ng-repeat="(key,item) in itemDetails track by $index">
+                    <a data-toggle="collapse" data-target="#submenu-{{$index+2}}" class="text-capitalize">
+                         <!-- <div ng-init="filtered = (item | filter:filterFn)"></div>
+                         <div ng-show="filtered.length !== 0"> -->
+
+                    <i ng-show="result.length > 0" class="glyphicon glyphicon-tasks"></i>&nbsp;          {{result.length > 0 ?key : ''}}                        
+                     <i ng-show="result.length > 0" class="glyphicon  glyphicon-triangle-bottom pull-right"></i></a>
+                        
+                        <ul id="submenu-{{$index+2}}" class="collapse" style="cursor: pointer;">
+                            <li  ng-repeat="i in result = (item | filter:getlist)" class="sub-li-nav"  
+                                ng-click="redirectToPage(i.jsonPath,i.apiPath,i.title,i.methodType,i.descriptionUrl,i.describe,i.model,i.urlpath)" >
+                           
+                                <i class="glyphicon glyphicon-forward"></i>&nbsp;{{i.title}} 
+                            </li>
+                        </ul>                       
+                    </li>     
+            </ul>
+</div> 
+        

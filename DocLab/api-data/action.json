@@ -1,0 +1,70 @@
+{
+  "Authentication": [{
+      "title": "Sample-Login",
+      "jsonPath": "actions/sample-authentication/login.json",
+      "urlpath": "authentication?segment=authenticate",
+      "apiPath": "api/login",
+      "modelSchema":"actions/product/modelSchema.json",
+      "descriptionUrl":"actions/sample-authentication/login.html",
+      "model":"actions/sample-authentication/login_schema.html",
+      "methodType": "post"
+
+      
+    }
+  ],
+
+  "Dashboard": [{
+      "title": "Sample-Profile Information",
+      "jsonPath": "actions/sample-dashboard/profileInformation.json",
+      "model":"actions/sample-dashboard/profileInformation_schema.html",
+      "modelSchema":"actions/product/modelSchema.json",
+      "apiPath": "api/profileinfo",
+      "methodType": "post",
+      "describe":"",
+      "descriptionUrl":"actions/sample-dashboard/profileInformation.html"
+      
+    },
+    {
+      "title": "Sample- Project Count",
+      "jsonPath": "actions/sample-dashboard/count_of_project_survey.json",
+      "apiPath": "api/countOfProjectSurvey",
+      "model":"actions/sample-dashboard/count_of_project_survey_schema.html",
+      "descriptionUrl":"actions/sample-dashboard/count_of_project_survey.html"
+    },
+    {
+      "title": "Sample-Language Preference",
+      "jsonPath": "actions/sample-dashboard/languagePreferences.json",
+      "apiPath": "api/languagePreferences",
+      "model":"actions/sample-dashboard/languagePreferences_schema.html",
+      "descriptionUrl":"actions/sample-dashboard/languagePreferences.html"
+
+    },
+    {
+      "title": "Sample-Recent Activity",
+      "jsonPath": "actions/sample-dashboard/recentActivity.json",
+      "apiPath": "api/recentActivity",
+      "model":"actions/sample-dashboard/recentActivity_schema.html",
+      "descriptionUrl":"actions/sample-dashboard/recentActivity.html"
+    }
+  ],
+
+  "Other": [{
+      "title": "Sample-Members List",
+      "jsonPath": "actions/sample-1/membersList.json",
+      "apiPath": "api/membersList",
+      "model":"actions/sample-1/membersList_schema.html",
+      "descriptionUrl":"actions/sample-1/membersList.html"
+      
+    },
+    {
+      "title": "Sample-Project Share Remove",
+      "jsonPath": "actions/sample-1/projectShareRemove.json",
+      "apiPath": "api/projectShareRemove",
+      "model":"actions/sample-1/projectShareRemove_schema.html",
+      "descriptionUrl":"actions/sample-1/projectShareRemove.html"
+      
+    }
+  ]
+}
+
+
